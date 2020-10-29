@@ -1,12 +1,11 @@
 
 <?php
 	$name=$_POST['name'];
-	$branch=$_POST['branch'];
-    $cnt=$_POST['contact'];
+	$place=$_POST['place'];
+    $cnt=$_POST['phone'];
 	$email=$_POST['email'];
-	$cpi=$_POST['cpi'];
     require_once('db_connect.php');   
-    $sql = "INSERT INTO student  (`name`, `branch`, `phone`,`email`, `CPI`) VALUES ('$name','$branch','$cnt','$email','$cpi');";
+    $sql = "INSERT INTO company  (`co_name`, `place`, `phone`,`email`) VALUES ('$name','$place','$cnt','$email');";
 
 		    $res=mysqli_query($conn,$sql);
 			if($res)
@@ -27,14 +26,14 @@ function s() {
 
 
 
-	swal({ title:"   IIIT G ",text:"Student Added ", type:"success"},function(){
-    window.location.href = 'add_student.php';});
+	swal({ title:"   IIIT G ",text:"Company Added ", type:"success"},function(){
+    window.location.href = 'Add_company.php';});
 }
 function w() {
 
 
 
-swal({ title:"   IIIT G ",text:"Student Not Added ", type:"warning"},function(){
-window.location.href = 'add_student.php';});
+swal({ title:"   IIIT G ",text:"Company Not Added ", type:"warning"},function(){
+window.location.href = 'Add_company.php';});
 }
 </script>

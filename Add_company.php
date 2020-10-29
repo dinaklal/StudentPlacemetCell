@@ -75,9 +75,9 @@ function w()
         <div  class="col-sm-3 col-md-2 sidebar" >
           <ul class="nav nav-sidebar">
             <li><a href="index.php">Home</a></li>
-             <li  class="active"><a href="add_student.php">Add Student</a></li>
+             <li  ><a href="add_student.php">Add Student</a></li>
              <li><a href="view_students.php">View Students</a></li>
-            <li ><a href="shops.php">Companies</a></li>
+            <li class="active"><a href="add_company.php">Add Company</a></li>
                  <li ><a href="week_register.php">View Interests</a></li>
 
 
@@ -86,31 +86,21 @@ function w()
        
        </div>
         <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main" style="background-image:url('images/1.jpg') ;background-repeat: no-repeat; background-position: center;background-size: cover;">
-            <center>  <b> <h1  style="color:green;font-weight: 10000; text-shadow: 2px 2px green;">Add Student</h1></b></center>
+            <center>  <b> <h1  style="color:green;font-weight: 10000; text-shadow: 2px 2px green;">Add Company</h1></b></center>
           
           
-          <form class="form-signin" role="form" action="addc.php" method="post">
+          <form class="form-signin" role="form" action="addco.php" method="post">
    			
-        <input type="text" class="form-control" placeholder="Student Name" name="name" required><br>
-        <div class="form-group">
-            <span class="label label-primary">Branch</span>
-        <select class="form-control" class="form-control" name="branch" required >
-             
-                           <option>CSE
-                          </option value="CSE" >
-                           <option>ECE
-                          </option value="ECE" >
-                          <option>MEC
-                          </option value="MEC" >
-                           
-          </select></div>
-        <input type="number" class="form-control" placeholder="Phone Number" name="contact" required><br>
+        <input type="text" class="form-control" placeholder="Company Name" name="name" required><br>
+        <input type="text" class="form-control" placeholder="Place" name="place" required><br>
+     
+        <input type="number" class="form-control" placeholder="Phone Number" name="phone" required><br>
 
         <input type="email" class="form-control" placeholder="Email" name="email" required><br>
       
-        <input type="text" class="form-control" placeholder="CPI" name="cpi" required><br>
+
        
-        <button class="btn btn-lg btn-primary btn-block" type="submit">Add Student</button>
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Add Company</button>
       </form>
         
 
