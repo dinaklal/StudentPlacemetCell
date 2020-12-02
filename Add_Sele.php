@@ -6,14 +6,14 @@ function suc() {
 
 
 	swal({ title:"   IIIT G ",text:"Interests  Added ", type:"success"},function(){
-    window.location.href = 'Add_interest.php';});
+    window.location.href = 'Add_Sele.php';});
 }
 function fai() {
 
 
 
 swal({ title:"   IIIT G ",text:"Interests Not Added ", type:"warning"},function(){
-window.location.href = 'Add_interest.php';});
+window.location.href = 'Add_Sele.php';});
 }
 </script>
 <?php
@@ -28,10 +28,12 @@ if (isset($_POST["company"]))
     foreach($intrests as $c) {
         echo $c,$s, '<br>';
         
-    }/*
+        if ( $c != 'NA')
+	{
+
         require_once('db_connect.php');
       
-        $q="insert  into intrested_in_company (`cid`,`sid`) values ( '$c','$s')  ;";
+        $q="insert  into Selection (`cid`,`sid`) values ( '$s','$c')  ;";
         $res=mysqli_query($conn,$q);   
         if($res)
         {
@@ -41,7 +43,9 @@ if (isset($_POST["company"]))
 		{
 			echo ' <body onLoad="fai()">';
         }
-    }*/
+
+       }
+    }
 
 }
 
