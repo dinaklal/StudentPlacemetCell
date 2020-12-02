@@ -206,3 +206,7 @@ else
     <script src="js/docs.min.js"></script>
   </body>
 </html>
+
+<?php
+}
+?>
