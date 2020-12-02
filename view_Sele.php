@@ -1,4 +1,33 @@
+<html>
+<script src="m/dist/sweetalert.min.js"></script> <link rel="stylesheet" type="text/css" href="m/dist/sweetalert.css">
+<script>
+function suc() {
 
+
+
+	swal({ title:"   IIIT G ",text:"Selections  Added ", type:"success"},function(){
+    window.location.href = 'Add_Sele.php';});
+}
+function fai() {
+
+
+
+swal({ title:"   IIIT G ",text:"Selections Not Added ", type:"warning"},function(){
+window.location.href = 'Add_Sele.php';});
+}
+</script>
+<?php
+
+if (isset($_POST["branch"]))
+{
+    echo "Request Came\n";
+    echo $_POST["branch"];
+
+}
+
+else
+{
+  ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -83,6 +112,29 @@
        </div>
     <BR>
         
+    <form class="form-signin" role="form" action="view_Sele.php" method="post">
+   			
+         <div class="form-group">
+    <span class="label label-primary">Branch</span>
+        <select class="form-control" class="form-control" name="branch" required >
+             
+                           <option>CSE
+                          </option value="CSE" >
+                           <option>ECE
+                          </option value="ECE" >
+                          <option>MEC
+                          </option value="MEC" >
+                           
+          </select></div>
+
+          <button class="btn btn-lg btn-primary btn-block" type="submit">Search</button>
+      </form>
+        <hr> 
+
+
+
+
+             
 <?Php
 
 		            require_once('db_connect.php');

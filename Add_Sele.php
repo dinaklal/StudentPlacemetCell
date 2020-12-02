@@ -5,14 +5,14 @@ function suc() {
 
 
 
-	swal({ title:"   IIIT G ",text:"Interests  Added ", type:"success"},function(){
+	swal({ title:"   IIIT G ",text:"Selections  Added ", type:"success"},function(){
     window.location.href = 'Add_Sele.php';});
 }
 function fai() {
 
 
 
-swal({ title:"   IIIT G ",text:"Interests Not Added ", type:"warning"},function(){
+swal({ title:"   IIIT G ",text:"Selections Not Added ", type:"warning"},function(){
 window.location.href = 'Add_Sele.php';});
 }
 </script>
