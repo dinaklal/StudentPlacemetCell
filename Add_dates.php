@@ -5,15 +5,15 @@ function suc() {
 
 
 
-	swal({ title:"   IIIT G ",text:"Interests  Added ", type:"success"},function(){
-    window.location.href = 'Add_interest.php';});
+	swal({ title:"   IIIT G ",text:"Available Dates   Added ", type:"success"},function(){
+    window.location.href = 'Add_dates.php';});
 }
 function fai() {
 
 
 
-swal({ title:"   IIIT G ",text:"Interests Not Added ", type:"warning"},function(){
-window.location.href = 'Add_interest.php';});
+swal({ title:"   IIIT G ",text:"Available Dates Not Added ", type:"warning"},function(){
+window.location.href = 'Add_dates.php';});
 }
 </script>
 <?php
@@ -142,7 +142,7 @@ function w()
             <center>  <b> <h1  style="color:green;font-weight: 10000; text-shadow: 2px 2px green;">Add Available Dates</h1></b></center>
           
           
-          <form class="form-signin" role="form" action="Add_Interest.php" method="post">
+          <form class="form-signin" role="form" action="Add_dates.php" method="post">
    			
           <div class="form-group">
             <span class="label label-primary">Company</span>
@@ -174,100 +174,27 @@ while($row=mysqli_fetch_array($res))
 
           <div class="form-group">
             <span class="label label-primary">Date 1 </span>
-        <input type ="date" name="c1" > 
+            <input class="form-control" type="date" value="2020-08-19" name ="c1">
         </div>
 
 
-          <div class="form-group">
-            <span class="label label-primary">Intrerest 2 </span>
-        <select class="form-control" class="form-control" name="c2" required >
-             
-                          <?php
+            <div class="form-group">
+            <span class="label label-primary">Date 2 </span>
+            <input class="form-control" type="date" value="2020-08-19" name ="c2">
+        </div>
 
+        
+        <div class="form-group">
+            <span class="label label-primary">Date 3 </span>
+            <input class="form-control" type="date" value="2020-08-19" name ="c3">
+        </div>
 
-require_once('db_connect.php');
-
-$q="SELECT * FROM `company` ;";
-$res=mysqli_query($conn,$q);
-$i=0;
-
-while($row=mysqli_fetch_array($res))
-					{
-                        $i++;
-                        $id=$row['cid'];
-						$name=$row['co_name'];
-                        echo "<option value='$id' >$name
-                          </option >";
-                     }
-                     
-                     
-                     
-                     ?>
-                           
-          </select></div>
-
-
-
-          <div class="form-group">
-            <span class="label label-primary">Intrerest 3 </span>
-        <select class="form-control" class="form-control" name="c3" required >
-             
-                          <?php
-
-
-require_once('db_connect.php');
-
-$q="SELECT * FROM `company` ;";
-$res=mysqli_query($conn,$q);
-$i=0;
-
-while($row=mysqli_fetch_array($res))
-					{
-                        $i++;
-                        $id=$row['cid'];
-						$name=$row['co_name'];
-                        echo "<option value='$id' >$name
-                        </option >";
-                     }
-                     
-                     
-                     
-                     ?>
-                           
-          </select></div>
-
-
-          <div class="form-group">
-            <span class="label label-primary">Intrerest 4 </span>
-        <select class="form-control" class="form-control" name="c4" required >
-             
-                          <?php
-
-
-require_once('db_connect.php');
-
-$q="SELECT * FROM `company` ;";
-$res=mysqli_query($conn,$q);
-$i=0;
-
-while($row=mysqli_fetch_array($res))
-					{
-                        $i++;
-                        $id=$row['cid'];
-						$name=$row['co_name'];
-                        echo "<option value='$id' >$name
-                        </option >";
-                     }
-                     
-                     
-                     
-                     ?>
-                           
-          </select></div>
-      
-
+        <div class="form-group">
+            <span class="label label-primary">Date 4 </span>
+            <input class="form-control" type="date" value="2020-08-19" name ="c3">
+        </div> 
        
-        <button class="btn btn-lg btn-primary btn-block" type="submit">Record Interests</button>
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Record Available Dates</button>
       </form>
         
 

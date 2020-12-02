@@ -99,10 +99,10 @@ else
             <li ><a href="Add_company.php">Add Company </a></li>
             <li><a href="view_company.php">View Company</a></li>
             <li  ><a href="Add_Interest.php">Add Interests</a></li>
-            <li class="active"><a href="View_Interest.php">View Interests</a></li>
+            <li ><a href="View_Interest.php">View Interests</a></li>
             <li ><a href="schedule.php">Make schedule</a></li>
             <li ><a href="Add_Sele.php">Add Selection </a></li>
-            <li ><a href="view_Sele.php">View Selected </a></li>
+            <li class="active" ><a href="view_Sele.php">View Selected </a></li>
 
 
 
