@@ -119,11 +119,11 @@ function w()
       <div class="row">
         <div  class="col-sm-3 col-md-2 sidebar" >
           <ul class="nav nav-sidebar">
-          <li><a href="#">Home</a></li>
+          <li><a href="index.php">Home</a></li>
              <li><a href="add_student.php">Add Student</a></li>
              <li><a href="view_students.php">View Students</a></li>
             <li  ><a href="Add_company.php">Add Company </a></li>
-            <li><a href="view_company.php">View Company</a></li>
+            <li><a href="view_company.php">View Company</a></li><li ><a href="Add_dates.php">Add Available dates</a></li>
             <li class="active"><a href="Add_dates.php">Add Available dates</a></li>
             <li ><a href="Add_Interest.php">Add Interests</a></li>
             <li ><a href="View_Interest.php">View Interests</a></li>

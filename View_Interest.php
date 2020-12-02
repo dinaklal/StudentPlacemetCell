@@ -64,7 +64,7 @@
       <div class="row">
         <div  class="col-sm-3 col-md-2 sidebar" >
           <ul class="nav nav-sidebar">
-          <li><a href="#">Home</a></li>
+          <li><a href="index.php">Home</a></li>
              <li><a href="add_student.php">Add Student</a></li>
              <li><a href="view_students.php">View Students</a></li>
             <li  ><a href="Add_company.php">Add Company </a></li>
