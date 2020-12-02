@@ -73,7 +73,7 @@
             <li class="active"><a href="View_Interest.php">View Interests</a></li>
             <li ><a href="schedule.php">Make schedule</a></li>
             <li ><a href="Add_Sele.php">Add Selection </a></li>
-            <li ><a href="Add_Sele.php">View Selected </a></li>
+            <li ><a href="view_Sele.php">View Selected </a></li>
 
 
 
@@ -87,15 +87,11 @@
 
 		            require_once('db_connect.php');
         
-					$q="select 
-
-                    s.sid,s.name, s.branch,s.email,c.co_name ,c.place
+					$q="select   s.sid,s.name, s.branch,s.email,c.co_name ,c.place
                     
-                    from intrested_in_company ci join company c on ci.cid = c.cid  
-                    join student s on s.sid = ci.sid
-                    GROUP by ci.sid, ci.cid
-                    
-                    
+          from Selection  ci join company c on ci.cid = c.cid  
+          join student s on s.sid = ci.sid
+          GROUP by ci.sid, ci.cid
                     ;";
 					$res=mysqli_query($conn,$q);
 					$i=0;

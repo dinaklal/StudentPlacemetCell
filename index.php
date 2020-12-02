@@ -73,7 +73,7 @@
             <li ><a href="View_Interest.php">View Interests</a></li>
             <li ><a href="schedule.php">Make schedule</a></li>
             <li ><a href="Add_Sele.php">Add Selection </a></li>
-            <li ><a href="Add_Sele.php">View Selected </a></li>
+            <li ><a href="view_Sele.php">View Selected </a></li>
 
 
 
