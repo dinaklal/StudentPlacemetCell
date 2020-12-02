@@ -22,13 +22,13 @@ if (isset($_POST["company"]))
 {
     echo "Request Came\n";
     $intrests = array_unique( array( $_POST["c1"],$_POST["c2"],$_POST["c3"],$_POST["c4"])) ;
-    $s = $_POST["student"];
+    $s = $_POST["company"];
     foreach($intrests as $c) {
         echo $c,$s, '<br>';
       
-    /*  require_once('db_connect.php');
+       require_once('db_connect.php');
       
-        $q="insert  into intrested_in_company (`cid`,`sid`) values ( '$c','$s')  ;";
+        $q="insert into available_dates (`cid`,`c_date`) values (  values ( '$s','$c')  ;";
         $res=mysqli_query($conn,$q);   
         if($res)
         {
@@ -37,7 +37,7 @@ if (isset($_POST["company"]))
         else 
 		{
 			echo ' <body onLoad="fai()">';
-        }*/
+        }
     }
 
 }
@@ -123,7 +123,7 @@ function w()
              <li><a href="add_student.php">Add Student</a></li>
              <li><a href="view_students.php">View Students</a></li>
             <li  ><a href="Add_company.php">Add Company </a></li>
-            <li><a href="view_company.php">View Company</a></li><li ><a href="Add_dates.php">Add Available dates</a></li>
+            <li><a href="view_company.php">View Company</a></li><li >
             <li class="active"><a href="Add_dates.php">Add Available dates</a></li>
             <li ><a href="Add_Interest.php">Add Interests</a></li>
             <li ><a href="View_Interest.php">View Interests</a></li>
