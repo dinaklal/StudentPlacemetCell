@@ -146,9 +146,9 @@ if (isset($_POST["set"]))
             <li ><a href="Add_dates.php">Add Available dates</a></li>
             <li  ><a href="Add_Interest.php">Add Interests</a></li>
             <li ><a href="View_Interest.php">View Interests</a></li>
-            <li ><a href="schedule.php">Make schedule</a></li>
+            <li class="active" ><a href="schedule.php">Make schedule</a></li>
             <li ><a href="Add_Sele.php">Add Selection </a></li>
-            <li class="active" ><a href="view_Sele.php">View Selected </a></li>
+            <li ><a href="view_Sele.php">View Selected </a></li>
 
 
 
@@ -179,7 +179,7 @@ if (isset($_POST["set"]))
         c.cid = s.cid ; ;";
         $res=mysqli_query($conn,$q);
         $i=0;
-                  echo "<br>
+                  echo "<br><h1> Schedules </h1>
             
         <div class='col-sm-offset-2  table-responsive'>
           <table class='table table-responsive' style='background-color:white;'>
@@ -309,9 +309,9 @@ else
             <li ><a href="Add_dates.php">Add Available dates</a></li>
             <li  ><a href="Add_Interest.php">Add Interests</a></li>
             <li ><a href="View_Interest.php">View Interests</a></li>
-            <li ><a href="schedule.php">Make schedule</a></li>
+            <li class="active" ><a href="schedule.php">Make schedule</a></li>
             <li ><a href="Add_Sele.php">Add Selection </a></li>
-            <li class="active" ><a href="view_Sele.php">View Selected </a></li>
+            <li  ><a href="view_Sele.php">View Selected </a></li>
 
 
 
@@ -341,7 +341,7 @@ else
           c.cid = s.cid ; ;";
 					$res=mysqli_query($conn,$q);
 					$i=0;
-                    echo "<br>
+                    echo "<br> <h1> Schedules </h1>
               
           <div class='col-sm-offset-2  table-responsive'>
             <table class='table table-responsive' style='background-color:white;'>
