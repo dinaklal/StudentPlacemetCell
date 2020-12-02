@@ -28,7 +28,7 @@ if (isset($_POST["company"]))
       
        require_once('db_connect.php');
       
-        $q="insert into available_dates (`cid`,`c_date`) values (  values ( '$s','$c')  ;";
+        $q="insert into available_dates (`cid`,`c_date`) values  ( '$s','$c')  ;";
         $res=mysqli_query($conn,$q);   
         if($res)
         {
