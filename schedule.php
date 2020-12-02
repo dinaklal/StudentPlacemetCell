@@ -86,7 +86,9 @@
 <?Php
 
 		            require_once('db_connect.php');
-        
+          
+          $q="delete from Schedule where cid > 0 ;";
+          $res=mysqli_query($conn,$q);
 					$q="select cid, count(1) as interests from intrested_in_company i 
           group by cid 
           order by count(1) desc ;";
@@ -94,69 +96,33 @@
           while($row=mysqli_fetch_array($res))
 					{
             $i++;
-            $q = "select c_date  from available_dates where cid = 1 order by c_date limit 1 ;";
-            $res=mysqli_query($conn,$q);
-
-            $q="insert into available_dates (`cid`,`c_date`) values  ( '$s','$c')  ;";
+            $co = $row['cid'];
+            $q = "select c_date  from available_dates where cid = 1 order by c_date ;";
+            $res1=mysqli_query($conn,$q);
+            $flag = 0; 
+            while($row1=mysqli_fetch_array($res1))
+            {
+              $di = $row1['c_date'];
+              $q = "select *  from Schedule where date='$di' ;";
+              $result = $mysqli->query($q);
+              if($result->num_rows == 0) 
+              {
+  
+                $q="insert into Schedule  (`cid`,`date`) values  ( '$co','$di')  ;";
+                $res1=mysqli_query($conn,$q);
+                $flag = 1; 
+                break;
+              }          
+            }
+            if ($flag == 0 )
+            {
+              $q = "select max(date) as max_date from Schedule ;";
+              $res1=mysqli_query($conn,$q);
+              $di = $res1['max_date'];
+              $q="insert into Schedule  (`cid`,`date`) values  ( '$co','$di')  ;";
+              $res1=mysqli_query($conn,$q);
+            }
             
           }
-					$res=mysqli_query($conn,$q);
-					$i=0;
-					echo "<br>
-          <div class='table-responsive'>
-            <table class='table table-responsive' style='background-color:white;'>
-              <thead>
-                <tr>
-                <th class='col-md-2'>SINO</th>
-                  <th >Student ID</th>
-                  <th >Name</th>
-                  <th>Phone</th>
-                  <th>Email</th>
-                  <th>Branch</th>
-                  <th>CPI  </th>
 				
-                </tr>
-              </thead>
-              <tbody>";
-					while($row=mysqli_fetch_array($res))
-					{
-						$i++;
-                        $id=$row['sid'];
-						$name=$row['name'];
-						$branch=$row['branch'];
-						$cpi =$row['CPI'];
-						
-						$email =$row['email'];
-						$phone =$row['phone'];
-            
-						echo "<tr  class='clickable-row' data-href='mem_home.php?id=$id'>
-                        <td>S$i++</td>
-                 <td>S$id</td>
-                <td> $name</td>
-                  <td>$phone</td>
-                  <td>$email</td>        
-                  <td>$branch</td>
-                  <td>$cpi</td>
-                </tr>";
-					}
-                                      
-                                 
-
 ?>
-
-               
-              </tbody>
-            </table>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="js/jquery.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/docs.min.js"></script>
-  </body>
-</html>
