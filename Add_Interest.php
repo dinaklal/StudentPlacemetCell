@@ -6,14 +6,14 @@ function suc() {
 
 
 	swal({ title:"   IIIT G ",text:"Interests  Added ", type:"success"},function(){
-    window.location.href = 'Add_interest.php';});
+    window.location.href = 'Add_Interest.php';});
 }
 function fai() {
 
 
 
 swal({ title:"   IIIT G ",text:"Interests Not Added ", type:"warning"},function(){
-window.location.href = 'Add_interest.php';});
+window.location.href = 'Add_Interest.php';});
 }
 </script>
 <?php
@@ -122,7 +122,8 @@ function w()
              <li><a href="add_student.php">Add Student</a></li>
              <li><a href="view_students.php">View Students</a></li>
             <li  ><a href="Add_company.php">Add Company </a></li>
-            <li><a href="view_company.php">View Company</a></li><li ><a href="Add_dates.php">Add Available dates</a></li>
+            <li><a href="view_company.php">View Company</a></li>
+            <li ><a href="Add_dates.php">Add Available dates</a></li>
             <li class="active"><a href="Add_Interest.php">Add Interests</a></li>
             <li ><a href="View_Interest.php">View Interests</a></li>
             <li ><a href="schedule.php">Make schedule</a></li>

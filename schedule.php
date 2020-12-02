@@ -87,7 +87,19 @@
 
 		            require_once('db_connect.php');
         
-					$q="SELECT * FROM `student` ;";
+					$q="select cid, count(1) as interests from intrested_in_company i 
+          group by cid 
+          order by count(1) desc ;";
+          $res=mysqli_query($conn,$q);
+          while($row=mysqli_fetch_array($res))
+					{
+            $i++;
+            $q = "select c_date  from available_dates where cid = 1 order by c_date limit 1 ;";
+            $res=mysqli_query($conn,$q);
+
+            $q="insert into available_dates (`cid`,`c_date`) values  ( '$s','$c')  ;";
+            
+          }
 					$res=mysqli_query($conn,$q);
 					$i=0;
 					echo "<br>
